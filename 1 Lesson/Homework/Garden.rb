@@ -1,5 +1,5 @@
 class Raspberry
-  @@states = [:Отсутствует, :Цветение, :Зеленая, :Красная]
+  @@states = %i[Отсутствует Цветение Зеленая Красная]
 
   def initialize(index)
     @index = index
