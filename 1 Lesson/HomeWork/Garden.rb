@@ -46,11 +46,13 @@ end
 class Human
   attr_reader :name
   attr_reader :money
+  attr_reader :statistic_of_harvested_berries
 
   def initialize(name, plant)
     @name = name
     @plant = plant
     @amount_of_harvested_berries = 0
+    @statistic_of_harvested_berries = 0
     @money = 0
   end
 
@@ -62,6 +64,7 @@ class Human
   def harvest!
     if @plant.ripe_all?
       @amount_of_harvested_berries += @plant.berries_quantity
+      @statistic_of_harvested_berries += @plant.berries_quantity
       @plant.give_away_all!
       print "Дачник по имени #{name} собрал #{@plant.berries_quantity} ягод,\n"\
             "сейчас у него собрано #{@amount_of_harvested_berries} ягод.\n"\
@@ -122,5 +125,21 @@ if __FILE__ == $PROGRAM_NAME
       puts "Некорректная команда, повтори попытку"
     end
     command = gets.chomp
+  end
+  case worker.statistic_of_harvested_berries
+  when 0
+    print "Ты позоришь свой народ, не собрав ни одной ягоды\n"
+  when 1..10
+    print "Ты собрал всего #{worker.statistic_of_harvested_berries} ягод, неплохо для начала\n"
+  when 10..50
+    print "Хороший старт, #{worker.statistic_of_harvested_berries} ягод не так уж и мало\n"
+  when 50..100
+    print "Поработал на славу, возвращайся, когда станет скучно\n"
+  else
+    if worker.statistic_of_harvested_berries > 100
+      puts "Ты вообще человек?!"
+    elsif worker.statistic_of_harvested_berries > 500
+      puts "Нет, ты серьезно робот.."
+    end
   end
 end
