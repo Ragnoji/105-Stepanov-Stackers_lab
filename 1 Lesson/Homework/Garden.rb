@@ -34,8 +34,7 @@ class RaspberryBush
   end
 
   def ripe_all?
-    @raspberries.each { |berry| return false unless berry.ripe? }
-    true
+    @raspberries.map(&:ripe?).all?
   end
 
   def give_away_all!
