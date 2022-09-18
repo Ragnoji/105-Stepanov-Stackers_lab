@@ -82,6 +82,7 @@ class Human
       return
     end
     money_to_give = @amount_of_harvested_berries * @@price_per_berry
+    @statistic_of_harvested_berries += @amount_of_harvested_berries
     @amount_of_harvested_berries = 0
     @money += money_to_give
     puts "Ты продал ягоды за #{money_to_give} монеток"
