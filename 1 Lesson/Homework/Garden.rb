@@ -30,7 +30,7 @@ class RaspberryBush
   end
 
   def grow_all!
-    @raspberries.each { |berry| berry.grow! }
+    @raspberries.map(&:grow!)
   end
 
   def ripe_all?
