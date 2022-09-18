@@ -113,7 +113,8 @@ if __FILE__ == $PROGRAM_NAME
   print "Возможные команды:\n"\
   "0 - ухаживать за кустом малины, 1 - собрать ягоды,\n"\
   "2 - продать ягоды, 3 - баланс игрока, 4 - закончить игру\n"
-  command = gets.chomp
+  loop do
+    command = gets.chomp
   loop do
     case command
     when "0"
