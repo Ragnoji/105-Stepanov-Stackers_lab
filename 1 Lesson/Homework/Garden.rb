@@ -132,11 +132,9 @@ if __FILE__ == $PROGRAM_NAME
     print "Хороший старт, #{worker.statistic_of_harvested_berries} ягод не так уж и мало\n"
   when 50..100
     print "Поработал на славу, возвращайся, когда станет скучно\n"
+  when 100..500
+    puts "Ты вообще человек?!"
   else
-    if worker.statistic_of_harvested_berries > 100
-      puts "Ты вообще человек?!"
-    elsif worker.statistic_of_harvested_berries > 500
-      puts "Нет, ты серьезно робот.."
-    end
+    puts "Нет, ты серьезно робот.."
   end
 end
