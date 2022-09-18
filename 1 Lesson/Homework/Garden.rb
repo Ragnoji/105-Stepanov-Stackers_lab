@@ -27,7 +27,6 @@ class Raspberry
 end
 
 class RaspberryBush
-  attr_reader :berries_quantity
 
   def initialize(berries_quantity)
     @berries_quantity = berries_quantity
