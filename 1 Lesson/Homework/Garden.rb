@@ -8,7 +8,12 @@ class Raspberry
 
   def grow!
     unless ripe?
-      @state = @@states[(@@states.find_index(@state) + 1) % @@states.size]
+      @@states.each_cons(2) do |state, next_state|
+        if state == @state
+          @state = next_state
+          return
+        end
+      end
     end
   end
 
