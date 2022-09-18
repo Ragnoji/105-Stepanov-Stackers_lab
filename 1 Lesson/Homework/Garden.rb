@@ -87,6 +87,10 @@ class Human
     puts "Ты продал ягоды за #{money_to_give} монеток"
   end
 
+def statistic_of_harvested_berries
+  @statistic_of_harvested_berries + @amount_of_harvested_berries
+end
+
   def self.knowledge_base
     print "Заметки садовода:\n"\
               "Малину сажать весной, собирать, начиная с середины лета\n"\
