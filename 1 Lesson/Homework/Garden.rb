@@ -49,7 +49,8 @@ end
 
 class Human
   attr_reader :name, :money
-
+  @@price_per_berry = 2
+  
   def initialize(name, plant)
     @name = name
     @plant = plant
