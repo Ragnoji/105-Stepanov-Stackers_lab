@@ -72,7 +72,7 @@ class Human
       print "Дачник по имени #{name} собрал #{@plant.berries_quantity} ягод,\n"\
             "сейчас у него собрано #{@amount_of_harvested_berries} ягод.\n"\
     else
-                                                                                                                                                                print "Еще не все ягоды созрели\n"
+      print "Еще не все ягоды созрели\n"
     end
   end
 
