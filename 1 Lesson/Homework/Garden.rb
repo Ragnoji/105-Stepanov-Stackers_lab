@@ -7,7 +7,7 @@ class Raspberry
   end
 
   def grow!
-    if @state != :Красная
+    unless ripe?
       @state = @@states[(@@states.find_index(@state) + 1) % @@states.size]
     end
   end
