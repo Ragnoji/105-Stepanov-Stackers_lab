@@ -43,9 +43,7 @@ class RaspberryBush
 end
 
 class Human
-  attr_reader :name
-  attr_reader :money
-  attr_reader :statistic_of_harvested_berries
+  attr_reader :name, :money
 
   def initialize(name, plant)
     @name = name
