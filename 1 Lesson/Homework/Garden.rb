@@ -81,7 +81,7 @@ class Human
       puts "У тебя нет ягод в запасе"
       return
     end
-    money_to_give = @amount_of_harvested_berries * 2
+    money_to_give = @amount_of_harvested_berries * @@price_per_berry
     @amount_of_harvested_berries = 0
     @money += money_to_give
     puts "Ты продал ягоды за #{money_to_give} монеток"
