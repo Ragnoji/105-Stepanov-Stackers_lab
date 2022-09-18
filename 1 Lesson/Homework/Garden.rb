@@ -125,10 +125,11 @@ if __FILE__ == $PROGRAM_NAME
       worker.sell_berries!
     when "3"
       puts "#{worker.money} монет при себе"
+    when "4"
+      break
     else
       puts "Некорректная команда, повтори попытку"
     end
-    command = gets.chomp
   end
   case worker.statistic_of_harvested_berries
   when 0
