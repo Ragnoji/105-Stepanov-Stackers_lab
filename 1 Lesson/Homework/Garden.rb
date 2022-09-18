@@ -67,7 +67,6 @@ class Human
   def harvest!
     if @plant.ripe_all?
       @amount_of_harvested_berries += @plant.berries_quantity
-      @statistic_of_harvested_berries += @plant.berries_quantity
       @plant.give_away_all!
       print "Дачник по имени #{name} собрал #{@plant.berries_quantity} ягод,\n"\
             "сейчас у него собрано #{@amount_of_harvested_berries} ягод.\n"\
