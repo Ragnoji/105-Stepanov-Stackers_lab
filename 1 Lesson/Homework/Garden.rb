@@ -17,7 +17,7 @@ class Raspberry
   end
 
   def grab!
-    @state = @@states[0]
+    @state = @@states.first
   end
 end
 
