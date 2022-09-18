@@ -60,7 +60,7 @@ class Human
   end
 
   def work!
-    print "Дачник по имени #{@name} начал работу\n"
+    puts "Дачник по имени #{@name} начал работу"
     @plant.grow_all!
   end
 
