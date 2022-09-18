@@ -42,7 +42,8 @@ class RaspberryBush
   end
 
   def give_away_all!
-    @raspberries.each { |berry| berry.grab! }
+    @raspberries.map(&:grow!)
+    @berries_quantity
   end
 end
 
