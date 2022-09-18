@@ -99,14 +99,6 @@ end
 end
 
 if __FILE__ == $PROGRAM_NAME
-  # Human.knowledge_base
-  # bush = RaspberryBush.new(10)
-  # gardener = Human.new('Федя', bush)
-  # gardener.work!
-  # gardener.harvest!
-  # gardener.work!
-  # gardener.work!
-  # gardener.harvest!
 
   print "Здравствуй, это же ты хотел поработать на ферме?\n"\
        "Если это так, введи свое имя и начинай работу\n"
